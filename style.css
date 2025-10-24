@@ -1,0 +1,425 @@
+body {
+    background-image: url('background2.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.liste {
+    gap: 1em;
+}
+
+@media (min-width: 768px) {
+    .liste {
+        width: 100%;
+        display: flex;
+        justify-content: center
+    }
+}
+
+@media (min-width: 560px) {
+    .liste {
+        width: 100%;
+        display: flex;
+        justify-content: center
+    }
+}
+
+.item {
+    color: aliceblue;
+
+}
+
+
+.btn {
+    background-color: #d84b2a;
+    color: #fff;
+    border: 3px solid #702b16;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #702b16;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn:hover {
+    background-color: #f25c3c;
+}
+
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #702b16;
+}
+
+.title {
+    font-size: 4rem;
+    margin-bottom: 0px;
+    /*     margin-bottom: 40px;
+    letter-spacing: 2px; */
+    text-shadow: 4px 4px 0 #faea5d;
+    color: #e44141;
+    text-align: center;
+}
+
+#div-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    gap: 0.5em;
+}
+
+#div-name-held {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0em;
+    gap: 0.5em;
+}
+
+#name-input {
+    font-family: 'Luckiest Guy', cursive;
+    background-color: #faea5d;
+    color: #410352;
+    border: 3px solid #702b16;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #702b16;
+    transition: transform 0.1s, box-shadow 0.1s;
+    text-align: center;
+}
+
+#name-input::placeholder {
+    color: #4103525b;
+}
+
+#name-input:focus {
+    background-color: #faea5d;
+}
+
+#name-label {
+    font-family: 'Luckiest Guy', cursive;
+    color: #faea5d;
+    /* color más luminoso para contraste con el fondo */
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 25px;
+}
+
+
+.check {
+    height: 2em;
+    width: 2em;
+    font-size: 1.5rem;
+    position: relative;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#box {
+    height: auto;
+    background-color: rgba(62, 32, 58, 0.7);
+    position: absolute;
+    top: 29em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    gap: 0.5em;
+    padding-bottom: 2em;
+    width:50em;
+}
+
+.stat {
+    flex: 1 1 120px;
+    min-width: 0;
+    box-sizing: border-box;
+    background-color: rgba(228, 65, 65, 0.2);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid #e44141;
+    box-shadow: 0 2px 0 #702b16;
+
+
+}
+
+.stat-label {
+    margin: 1em;
+    color: #faea5d;
+    font-size: 1.2rem;
+}
+
+.stat-value {
+    color: #faea5d;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.title-name {
+    margin: 1em;
+    color: #faea5d;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.message {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    height: 100px;
+    z-index: 9999;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.message .btn:active {
+    transform: translateX(4px);
+    box-shadow: 0 0 0 #702b16;
+}
+.alert-content {
+    background: #faea5d;
+    border: 4px solid #702b16;
+    border-radius: 20px;
+    padding: 2px 40px;
+    color: #410352;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 0 #702b16, 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(0.8);
+    animation: popIn 0.25s ease-out forwards;
+}
+
+.modal-content {
+    background: #faea5d;
+    border: 4px solid #702b16;
+    border-radius: 20px;
+    padding: 25px 40px;
+    color: #410352;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 0 #702b16, 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(0.8);
+    animation: popIn 0.25s ease-out forwards;
+}
+
+.modal-content .btn:hover {
+    background-color: #f25c3c;
+}
+
+.modal-content .btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #702b16;
+}
+
+/* === Animaciones === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.character-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 2em;
+    margin: 2em auto;
+    left: 50%;
+    background-color: rgba(62, 32, 58, 0.7);
+    width: max-content;
+    padding: 2em;
+}
+
+.character {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    height: 20em;
+
+}
+
+.progress-bar {
+    width: em;
+    height: auto;
+    margin: 0.1em 0;
+    flex: 1;
+}
+
+.progress-background {
+    width: 100%;
+    height: 1em;
+    background-color: #d84b2a;
+    overflow: hidden;
+    border-radius: 50px;
+    font-size: large;
+    height: 1em;
+
+}
+
+.progress-info {
+    height: 100%;
+    background-color: #4CAF50;
+    color: #4d2727;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: medium;
+    text-align: center;
+    line-height: 1em;
+    white-space: nowrap;
+    border-radius: 4px 0 0 4px;
+    font-size: 0.8em;
+}
+
+.progress-bar.btn {
+    display: block;
+    border-radius: 50px;
+    height: 1em;
+    padding: 0px;
+    height: 0.8em;
+    justify-items: center;
+
+}
+
+.progress-container {
+    display: flex;
+    gap: 0.2em;
+    align-items: center;
+    margin: 0;
+}
+
+.shaden {
+    color: #fff;
+    text-align: center;
+    color: #faea5d;
+    font-size: 1rem;
+    margin: 8px 8px 4px 8px;
+    padding: 0 0.2em;
+}
+
+
+.shaden-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.shaden-div .shaden.shaden-plus {
+    margin-top: 10px;
+    color: #4CAF50;
+}
+
+.shaden-div .shaden.shaden-minus {
+    color: #ea1815;
+}
+
+.hp-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.title-vs {
+    color: #fff;
+    text-align: center;
+    color: #faea5d;
+    font-size: 2rem;
+    margin: 8px 8px 4px 8px;
+    padding: 0 0.2em;
+}
+
+.vs {
+    color: #d84b2a;
+    text-shadow: 4px 4px 0 #faea5d;
+    color: #e44141;
+    text-align: center;
+    font-size: 3rem;
+    align-self: flex-start;
+
+}
+
+
+.rounde {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+
+.heal-btn {
+    background-color: #d84b2a;
+    color: #fff;
+    border: 3px solid #702b16;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #702b16;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.heal-btn:hover {
+    background-color: #f25c3c;
+}
+
+.heal-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #702b16;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="simpleDungeon.cjs" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css"> -->
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Dice Dungeon</h1>
+        <div id="div-name">
+            <input id="name-input" type="text" placeholder="Enter your name" autocomplete="off">
+            <button class="btn check" onclick="login()">✔</button>
+        </div>
+        <div id="div-name-held" class="hidden">
+            <label id="name-label"></label>
+        </div>
+        <nav>
+            <div class="liste hidden" id="nav-id">
+                <button class="btn" onclick="clickStatus()">Status</button>
+                <button class="btn" onclick="clickFight()">Fight</button>
+                <button class="btn" onclick="clickLoot()">Loot</button>
+                <button class="btn" onclick="clickQuit()">Quit</button>
+            </div>
+        </nav>
+    </header>
+    <div class="character-container hidden">
+
+        <div>
+            <p class="title-vs"> Taday </p>
+            <img class="character" src="heal.png" alt="heal">
+            <div>
+                <div class="shaden-div">
+                    <p class="shaden"> Schaden: </p>
+                    <p class="shaden shaden-plus"> -2</p>
+                </div>
+                <div class="progress-container">
+                    <p class="shaden"> HP: </p>
+                    <div class="progress-bar btn">
+                        <div class="progress-background">
+                            <div class="w3-container w3-center progress-info ">25%</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="shaden-div">
+                    <p class="shaden"> Schaden: </p>
+                    <p class="shaden shaden-minus"> -8</p>
+                </div>
+            </div>
+        </div>
+        <p class="title-vs vs"> VS. </p>
+        <div>
+            <p class="title-vs"> Rattenkönig </p>
+            <img class="character" src="rata.png" alt="heal">
+            <div>
+                <div class="shaden-div">
+                    <p class="shaden"> Schaden: </p>
+                    <p class="shaden shaden-plus"> -2</p>
+                </div>
+                <div class="progress-container">
+                    <p class="shaden"> HP: </p>
+                    <div class="progress-bar btn">
+                        <div class="progress-background">
+                            <div class="w3-container w3-center progress-info ">25%</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="shaden-div">
+                    <p class="shaden"> Schaden: </p>
+                    <p class="shaden shaden-minus"> -8</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="box-fight">
+
+    </div>
+
+    <div id="box" class="hidden">
+
+        <div id="box-status" class="hidden">
+            <div id="box-info" class="status-card">
+                <h2 class="title-name">🧙‍♂️ Status</h2>
+
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="stat-label">❤️ HP:</span>
+                        <span class="stat-value" id="hp-info">20 / 20</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-label">⭐ Lvl:</span>
+                        <span class="stat-value" id="lvl-info">1</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-label">🪙 Gold:</span>
+                        <span class="stat-value" id="gold-info">0</span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-label">🎒 Inventar:</span>
+                        <span class="stat-value" id="inventar-info">🍎 Apfel, 🧪 Trank</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="box-loot">
+
+        </div>
+    </div>
+</body>
+
+<div id="customModal" class="modal">
+    <div class="modal-content" id="modal-content">
+        <p id="modal-message">This is a custom message!</p>
+        <div id="modal-buttons">
+        </div>
+    </div>
+</div>
+<div id="customMessage" class="message">
+    <div class="alert-content" id="modal-content">
+        <p id="alert-message">This is a custom message!</p>
+        <div id="modal-buttons">
+        </div>
+    </div>
+</div>
+
+
+</html>
